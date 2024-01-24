@@ -174,21 +174,21 @@ def game_scene() -> None:
                         if knifes[knife_number].y < constants.OFF_TOP_SCREEN:
                             knifes[knife_number].move(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
 
-        elif direction == 3:
+        if direction == 3:
             for knife_number in range(len(knifes)):
                 if knifes[knife_number].x > 0:
                         knifes[knife_number].move(knifes[knife_number].x, knifes[knife_number].y + constants.KNIFE_SPEED)
                         if knifes[knife_number].y > constants.OFF_BOTTOM_SCREEN:
                             knifes[knife_number].move(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
 
-        elif direction == 2:
+        if direction == 2:
             for knife_number in range(len(knifes)):
                 if knifes[knife_number].y > 0:
                         knifes[knife_number].move(knifes[knife_number].x - constants.KNIFE_SPEED, knifes[knife_number].y)
                         if knifes[knife_number].y < constants.OFF_LEFT_SCREEN:
                             knifes[knife_number].move(constants.OFF_SCREEN_X, constants.OFF_SCREEN_Y)
 
-        elif direction == 1:
+        if direction == 1:
             for knife_number in range(len(knifes)):
                 if knifes[knife_number].y > 0:
                         knifes[knife_number].move(knifes[knife_number].x + constants.KNIFE_SPEED, knifes[knife_number].y)
